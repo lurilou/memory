@@ -96,6 +96,10 @@
     border-radius: 5px;
   }
 
+  button:hover {
+    cursor: url('https://i.postimg.cc/PJmyZxq9/Pointer.png'), pointer;
+  }
+
   p {
     font-size: 25px;
     font-weight: bold;
