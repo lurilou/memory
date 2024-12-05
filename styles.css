@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: default;
+    cursor: url('https://i.postimg.cc/nV70Nd12/Default.png'), default;
   }
 
   body {
@@ -40,7 +40,7 @@
 
   }
 .back-face {
-  cursor: pointer;
+  cursor: url('https://i.postimg.cc/PJmyZxq9/Pointer.png'), pointer;
 }
   .memory-card:active {
 
