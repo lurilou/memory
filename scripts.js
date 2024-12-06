@@ -5,7 +5,6 @@ let firstCard, secondCard;
 
 function shuffle() {
     const positions = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",];
-  debugger;
   for (let card of cards) {
     let randomIndex = Math.floor(Math.random() * 16);
     card.style.order = positions[randomIndex];
@@ -14,7 +13,6 @@ function shuffle() {
 }
 
 function flipCard() {
-  debugger;
   if (!firstCard) {
     this.classList.toggle("flip");
     this.removeEventListener("click", flipCard);
@@ -31,7 +29,6 @@ function flipCard() {
 }
 
 function compareCards(cardOne, cardTwo) {
-  debugger;
   if (
     cardOne.querySelector(".front-face").alt ===
     cardTwo.querySelector(".front-face").alt
@@ -51,7 +48,6 @@ function unflipCard(cardToFlip) {
 }
 
 function checkForGameEnd() {
-    debugger;
     for (const card of cards) {
         if (!card.classList.contains("flip")) return;
     }
@@ -60,9 +56,10 @@ function checkForGameEnd() {
 }
 
 function newGame() {
-    debugger;
-    shuffle();
     cards.forEach((card) => card.addEventListener("click", flipCard));
     cards.forEach((card) => card.classList.toggle("flip"));
     document.querySelector(".success").classList.add("hidesuccess");
+    setTimeout(() => {
+      shuffle();
+    }, 500);
 }
